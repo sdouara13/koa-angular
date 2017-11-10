@@ -1,0 +1,18 @@
+{
+  "LANG": "EN",
+  "THEME-SETTING": "主题设置",
+  "DEVICE-SETTING": "设备切换器",
+  "GM-DIRECTIVE": "GM指令",
+  "MAIN": {
+    "TABLE": "GM指令表",
+    "ABOUT": "关于作者",
+    "INTRODUCTION": "<p>FreeNG是一款基于Angular的UI框架，提供了诸多强大的可以重新组合的UI组件，门槛极低，拿来即用。</p><p>FreeNG还很年轻，首个版本发布于2017年5月。</p>",
+    "CURRENT-VERSION": "当前版本",
+    "DECLARATION": "<p><b>特别声明：</b> 如其名Free，FreeNG是完全开源免费的!</p>",
+    "FEATURE": {
+      "TITLE": "功能特点",
+      "INTRO": "<ol class='main-point'><li>基于最新的Angular4开发</li><li>采取Flex布局实现完全响应式布局</li><li>丰富的主题选择</li><li>易用的API，可按需组合的UI组件</li></ol>"
+    }
+  }
+}
+

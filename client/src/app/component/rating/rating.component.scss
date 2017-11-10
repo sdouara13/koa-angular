@@ -1,0 +1,41 @@
+@import "../../../assets/sass/variables";
+
+.free-rating {
+  display: flex;
+  align-items: center;
+
+  .free-rating-item {
+    position: relative;
+    cursor: pointer;
+    line-height: 0;
+
+    div {
+      display: inline-block;
+      font-size: 1rem;
+      padding: 0 .2rem;
+    }
+
+    .free-rating-half {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      z-index: 10;
+      opacity: 0;
+      overflow: hidden;
+      padding-right: 0;
+    }
+  }
+
+  &.free-rating-readonly {
+    .free-rating-item {
+      cursor: not-allowed;
+    }
+  }
+
+  @each $theme, $color in $theme {
+      &.free-#{$theme} {
+        color: $color;
+      }
+  }
+}

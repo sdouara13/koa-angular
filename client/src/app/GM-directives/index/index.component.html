@@ -1,0 +1,82 @@
+<aside class="left-menu free-iscroll">
+  <ul class="left-menu-item">
+    <li fRipple>
+      <a routerLink="directives" routerLinkActive="active">
+        <free-icon [icon]="'desktop'"></free-icon>
+        <span class="accordion-toggle-title">{{'GM-DIRECTIVE' | translate}}</span>
+      </a>
+    </li>
+    <li fRipple>
+      <a routerLink="uploader" routerLinkActive="active">
+        <free-icon [icon]="'upload'"></free-icon>
+        <span class="accordion-toggle-title">{{'GM-UPLOADER' | translate}}</span>
+      </a>
+    </li>
+  </ul>
+</aside>
+<div class="top-menu">
+  <div class="aside-header">
+    <div class="aside-header-inner">
+      <ul>
+        <li class="toggle-btn">
+          <a (click)="toggleAside()" fRipple>
+            <free-icon [icon]="'navicon'"></free-icon>
+          </a>
+        </li>
+      </ul>
+      <span class="top-logo-mini">GM</span>
+      <span class="top-logo">GM</span>
+      <button fButton class="free-language" [size]="'mini'" (click)="changeLanguage()">
+        {{"LANG" | translate}}
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<div class="theme-setting" #setting (click)="open($event)">
+  <free-icon icon="cog" [spin]="true"></free-icon>
+</div>
+
+<main class="main-layout-container free-iscroll" #main>
+  <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate($event)"></router-outlet>
+</main>
+
+<free-sidenav [visible]="sidebarActive" direction="right" (onChange)="sidenavChange($event)"
+              [style]="{top: '60px'}" [overlay]="true">
+  <h4>{{'THEME-SETTING' | translate}}</h4>
+  <div class="row">
+    <ul class="theme-color-list">
+      <li *ngFor="let t of theme" class="theme-color-item" title="{{t.name}}"
+          (click)="selectTheme(t.name)" [ngStyle]="{background: t.color}">
+      </li>
+    </ul>
+  </div>
+  <h4>{{'THEME-SETTING' | translate}}</h4>
+  <div class="row">
+    <ul class="deviceswitcher-menu">
+      <li (click)="reviewMobile()">
+        <i class="fa fa-mobile"></i>
+      </li>
+    </ul>
+  </div>
+</free-sidenav>
+
+<div class="free-demo-mobile" [class.active]="type === 'mobile'">
+  <span (click)="type = 'desktop'"><i class="fa fa-close"></i></span>
+  <div class="review-phone">
+    <div class="phone-header">
+      <div class="phone-nav">
+        <span class="phone-nav-dian">....</span>
+        <div class="phone-nav-line"></div>
+        <span class="fa fa-battery-half phone-battery"></span>
+      </div>
+    </div>
+    <div class="phone-container">
+      <iframe src="http://localhost:8080" frameborder="0" width="318" height="502"></iframe>
+    </div>
+    <div class="phone-footer">
+
+    </div>
+  </div>
+</div>

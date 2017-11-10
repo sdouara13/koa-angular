@@ -1,0 +1,53 @@
+@import '../../../assets/sass/mixin';
+.main-container free-accordion-group{
+  margin-bottom: .75rem;
+}
+
+.main-container free-panel,
+.main-container free-tab-group {
+  margin-bottom: .75rem;
+}
+
+.donate {
+  display: flex;
+
+   div {
+     width: 50%;
+     img {
+       width: 97%;
+       margin-right: 3%;
+     }
+   }
+}
+
+:host /deep/ {
+  ul li ul {
+    margin-left: 1rem;
+  }
+
+  .main-point {
+    padding: 0 10px 0 30px;
+  }
+
+  .main-container .accordion-content .accordion-inner {
+    padding: .5rem !important;
+  }
+
+  .free-panel-header {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .free-panel {
+    .table {
+      table-layout: fixed;
+      td {
+        text-align: center;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        white-space: normal;
+        word-wrap: break-word;
+      }
+    }
+  }
+}

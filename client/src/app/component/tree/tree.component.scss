@@ -1,0 +1,90 @@
+$default:#222;
+
+.free-tree {
+
+  .free-checkbox {
+    display: inline;
+
+    .free-checkbox-ins {
+      transform: scale(.8);
+    }
+
+    .free-checkbox-inner {
+      padding: 0;
+      & > input:checked + .free-checkbox-ins:before {
+        background: $default;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    color: #333;
+
+    li:before,
+    li:after,
+    li span:before,
+    li span:after {
+      font-family: "FontAwesome";
+    }
+
+    li.free-tree-item {
+      cursor: pointer;
+      line-height: 1.2rem;
+
+      & > ul {
+        overflow: hidden;
+      }
+
+      ul li {
+        margin: 0 20px;
+      }
+
+      & > span {
+        display: inline-flex;
+        align-items: center;
+        line-height: 0;
+
+        free-echeckbox + .free-tree-item-inner {
+          padding-left: .3rem;
+        }
+
+        & > i {
+          order: -2;
+          display: block;
+          line-height: 0;
+          padding: 0 .3rem;
+          transition: all .25s;
+        }
+
+        &:hover {
+          color: $default;
+        }
+      }
+
+      &.open {
+        height: auto;
+
+        & > span > i {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+
+    li.last span {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding-left: 15px;
+
+      i {
+        padding: 0 .3rem 0 0;
+        color: $default;
+      }
+
+      free-echeckbox + i {
+        padding: 0 .3rem;
+      }
+    }
+  }
+}

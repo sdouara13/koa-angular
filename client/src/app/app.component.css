@@ -1,0 +1,28 @@
+.free-main {
+  height: 100%; }
+
+:host-context(.free-mini) /deep/ .main-layout-container {
+  left: 2.5rem; }
+:host-context(.free-mini) /deep/ .left-menu .accordion-item .accordion-toggle i {
+  padding-right: 0 !important; }
+:host-context(.free-mini) /deep/ .left-menu .accordion-toggle:hover + .accordion-content {
+  position: absolute;
+  top: 0;
+  left: 45px;
+  height: auto; }
+:host-context(.free-mini) /deep/ .aside-header {
+  width: 2.5rem; }
+:host-context(.free-mini) /deep/ .aside-header-inner > span.top-logo-mini {
+  display: block; }
+:host-context(.free-mini) /deep/ .aside-header-inner > span.top-logo {
+  display: none; }
+:host-context(.free-mini) /deep/ .main-layout-container {
+  left: 0 !important; }
+:host-context(.free-mini) /deep/ .left-menu {
+  left: -12.5rem !important; }
+:host-context(.free-mini) /deep/ .aside-header-inner > span.top-logo-mini {
+  display: none !important; }
+:host-context(.free-mini) /deep/ .aside-header-inner > span.top-logo {
+  display: block !important; }
+
+/*# sourceMappingURL=app.component.css.map */

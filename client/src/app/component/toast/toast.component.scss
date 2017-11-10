@@ -1,0 +1,50 @@
+@import "../../../assets/sass/variables";
+.free-toast {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 10010;
+
+    .free-toast-item {
+      max-width: 15rem;
+      padding: .5rem 1rem;
+      font-size: .7rem;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.2);
+      line-height: 1.5;
+      position: relative;
+      margin-bottom: .5rem;
+      display: flex;
+      align-content: center;
+      overflow: hidden;
+      color: #fff;
+
+      .free-notification-avatar {
+        display: flex;
+        align-content: center;
+        font-size: 1rem;
+        padding-right: .5rem;
+      }
+
+      &.free-default {
+        background: rgba(0,0,0,.8);
+      }
+
+      @each $theme, $color in $theme {
+        &.free-#{$theme} {
+          background-color: $color !important;
+        }
+      }
+
+      .free-toast-item-content {
+        display: flex;
+        flex-direction: column;
+
+        .free-toast-message {
+          display: block;
+        }
+      }
+    }
+  }
+

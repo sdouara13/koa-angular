@@ -1,0 +1,46 @@
+<section class="main-container">
+  <div class="row">
+    <!--<free-panel fGrid="12">-->
+      <!--<f-header>{{'MAIN.TITLE' | translate}}</f-header>-->
+      <!--<div [innerHTML]="'MAIN.INTRODUCTION' | translate"></div>-->
+      <!--<p><b>{{'MAIN.CURRENT-VERSION' | translate}}：</b> v{{version}}</p>-->
+      <!--<div [innerHTML]="'MAIN.DECLARATION' | translate"></div>-->
+    <!--</free-panel>-->
+
+
+    <free-panel fGrid="12" [header]="'MAIN.TABLE' | translate">
+      <free-select [(ngModel)]="selectedOption"
+                   [options]="projects" pholder="select"></free-select>
+
+      <free-tab-group (onChange)="onTabChange($event)">
+      <free-tab [header]="project.label" *ngFor="let project of projects">
+
+        <free-table [border]="true">
+          <free-table-header>
+            <free-table-row>
+              <free-table-head>keys</free-table-head>
+              <free-table-head>gm</free-table-head>
+              <free-table-head>etc</free-table-head>
+            </free-table-row>
+          </free-table-header>
+
+          <free-table-body>
+            <free-table-row *ngFor="let cell of cells[project.value]">
+              <free-table-cell>{{cell?.keys}}</free-table-cell>
+              <free-table-cell>{{cell?.gm}}</free-table-cell>
+              <free-table-cell>{{cell?.etc}}</free-table-cell>
+            </free-table-row>
+          </free-table-body>
+        </free-table>
+
+      </free-tab>
+      </free-tab-group>
+    </free-panel>
+
+  </div>
+  <blockquote>
+    <p>
+      <small class="text-muted">Copyright &copy; 2014 - 2017 Westhouse Corporation Limited. All rights reserved.</small>
+    </p>
+  </blockquote>
+</section>

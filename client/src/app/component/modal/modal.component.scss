@@ -1,0 +1,121 @@
+@import "../../../assets/sass/variables";
+.free-modal {
+  position: fixed;
+  background: #fff;
+  overflow: hidden;
+  min-width: 10rem;
+  border-radius: 2px;
+  top: 0;
+  left: 50%;
+  color: #222;
+  z-index: 9999;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  transform: translate(-50%, 0);
+  margin: 30px auto;
+  transition: all .3s;
+
+  &.free-modal-spinner {
+    min-width: 1rem;
+    background: transparent;
+    box-shadow: none;
+    top: 50%;
+    left: 50% !important;
+    width: auto;
+    transform: translate(-50%, -50%) !important;
+
+    .free-modal-content {
+      padding: 0;
+    }
+
+    .free-loading span {
+      background: #fff;
+    }
+  }
+
+  .free-modal-header {
+    cursor: pointer;
+  }
+
+  .free-modal-content {
+    padding: .75rem;
+  }
+
+  .free-modal-header,
+  .free-modal-footer {
+    position:relative;
+    padding: .5rem .75rem;
+    background: #f5f5f5;
+  }
+
+  .free-modal-footer {
+    text-align: right;
+
+    button {
+      margin: 0;
+    }
+  }
+
+  .free-modal-close {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 1rem;
+    height: 1rem;
+    opacity: 0.2;
+    line-height: 1rem;
+    text-align: center;
+    border-radius: 50%;
+    color: #000;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .free-prompt-input input {
+    width: 100%;
+    border: none;
+    background: #fff;
+    border-radius: 3px;
+    color: #333;
+    padding: 0 .5rem;
+  }
+}
+
+@each $theme, $color in $theme {
+  .free-#{$theme} .free-modal{
+    background: $color !important;
+    color: #fff;
+
+    .free-modal-header,
+    .free-modal-footer {
+      background: rgba(0, 0, 0, .1);
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .free-modal {
+    width: 95% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .free-modal {
+    width:600px;
+    margin: 30px auto
+  }
+
+  .free-modal-sm {
+    width: 300px
+  }
+}
+
+@media (min-width: 992px) {
+  .free-modal-lg {
+    width:900px
+  }
+}
