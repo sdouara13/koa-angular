@@ -9,7 +9,7 @@
 <br/> │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── i18ns
 <br/> │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── json
 <br/> │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── sass
-<br/> │     ├── themes
+<br/> │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── themes
 <br/> ├── app                                        // 前端工程目录
 <br/> │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── component                           // 公共业务组件
 <br/> │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── XXX(如GM-directives)                // 单个应用
